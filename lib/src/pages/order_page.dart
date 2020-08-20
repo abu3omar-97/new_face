@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:newFace/src/pages/sign_in_page.dart';
 import '../widgets/order_card.dart';
 
 // # 7 + 8
@@ -33,17 +34,22 @@ class _OrderPageState extends State<OrderPage> {
       ),
       body: ListView(
         scrollDirection: Axis.vertical,
-        children: <Widget>[OrderCard(), OrderCard(), _buildTotalContainer()],
+        children: <Widget>[
+          Column(
+            children: <Widget>[OrderCard(), OrderCard()],
+          ),
+          _buildTotalContainer(context)
+        ],
       ),
     );
   }
 }
 
-Widget _buildTotalContainer() {
+Widget _buildTotalContainer(BuildContext context) {
   return Container(
-    margin: EdgeInsets.only(top: 15),
+    margin: EdgeInsets.only(top: 5),
     child: Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(19),
       child: Column(
         children: <Widget>[
           Row(
@@ -109,21 +115,27 @@ Widget _buildTotalContainer() {
             ],
           ),
           SizedBox(
-            height: 20,
+            height: 22,
           ),
-          Container(
-            width: 380,
-            height: 50,
-            decoration: BoxDecoration(
-                color: Colors.blueAccent,
-                borderRadius: BorderRadius.circular(30)),
-            child: Center(
-              child: Text(
-                "Order Now",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    color: Colors.white),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => SignInPage()));
+            },
+            child: Container(
+              width: 380,
+              height: 50,
+              decoration: BoxDecoration(
+                  color: Colors.blueAccent,
+                  borderRadius: BorderRadius.circular(30)),
+              child: Center(
+                child: Text(
+                  "Order Now",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                      color: Colors.white),
+                ),
               ),
             ),
           ),
