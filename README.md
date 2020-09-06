@@ -2,15 +2,37 @@
 
 New Face App
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+Design Phase:::
 
-A few resources to get you started if this is your first Flutter project:
+---------------FIRST PAGE:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Header
+- Food Cards (icons, text)
+- Search Bar
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Hot & New Section
+--FOOD LIST (Image, Name, Rating, Price)
+---------------2.5 Hours
+
+---------------FOOD CART (ORDERS) PAGE:
+
+- Order Item Card
+-- Items Counter
+-- Image Preview 
+-- Price
+-- Ingredients 
+-- Cancel
+
+- Total Order Cost
+
+---------------0.5 Hours
+
+
+---------------Global Components:
+*Bottom Navigation Bar
+- Home
+- Orders
+- Offers
+- Profile
+---------------0.5 Hours
