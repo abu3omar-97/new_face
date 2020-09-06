@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class FoodCard extends StatelessWidget {
   final String categoryName;
-  final String iconCategory;
+  final IconData iconCategory;
   final int numberOfItems;
 
   FoodCard(this.categoryName, this.iconCategory, this.numberOfItems);
@@ -17,7 +17,7 @@ class FoodCard extends StatelessWidget {
             Container(
               width: 70,
               child: Icon(
-                Icons.fastfood,
+                iconCategory,
                 size: 36,
                 color: Colors.orangeAccent,
               ),

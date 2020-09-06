@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:newFace/src/pages/sign_up_page.dart';
 
 class SignInPage extends StatefulWidget {
   @override
@@ -26,10 +27,9 @@ class _SignInPageState extends State<SignInPage> {
             onPressed: () {
               setState(() {
                 _toogleVisibilty = !_toogleVisibilty;
-                if (!_toogleVisibilty)
-                  visible = Icons.visibility;
-                else
-                  visible = Icons.visibility_off;
+
+                visible =
+                    _toogleVisibilty ? Icons.visibility_off : Icons.visibility;
               });
             },
             icon: Icon(visible),
@@ -124,12 +124,18 @@ class _SignInPageState extends State<SignInPage> {
                     "Don't have an account yet? | ",
                     style: TextStyle(fontSize: 17),
                   ),
-                  Text(
-                    "Sign Up Now",
-                    style: TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.blueAccent),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (BuildContext context) => SignUpPage()));
+                    },
+                    child: Text(
+                      "Sign Up Now",
+                      style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blueAccent),
+                    ),
                   )
                 ],
               )
