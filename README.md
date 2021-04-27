@@ -1,4 +1,4 @@
-# newFace
+# NewFace Food Ordering App
 
 New Face App
 
